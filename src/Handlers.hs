@@ -26,7 +26,7 @@ readingServer :: ServerT ReadingApi AppM
 readingServer = allReadings
 
 readerServer :: Config -> Server ReadingApi
-readerServer cfg = enter (readerToEither cfg) readingServer :: _
+readerServer cfg = enter (readerToEither cfg) readingServer 
 
 
 allReadings :: AppM [PReading]
